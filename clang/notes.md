@@ -41,3 +41,14 @@ double  - double precision floating point
 ## <stdio.h>
 printf - writes output
 scanf - reads input
+
+
+## random
+
+- a general rule - in any context where it is permissible to use the value of some type, you can use a more complicated expression of that type.
+
+- the `for` statement. It has 3 parts separated by semicolons:
+    1. the initialization (fahr=0) and it's done once, before the loop is entered.
+    2. test condition or condition that controls the loop (fahr<=300), this condition is evaluated: if it's true, the body of the loop is executed.
+    3. the increment step (fahr=fahr+20) is executed and the condition re-evaluated.
+The loop terminates if the condition has become false. The body can be a single statement or a group of statements enclosed in braces. The initialization, condition and increment can be any expressions.
