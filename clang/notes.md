@@ -54,7 +54,7 @@
 - `#include` <lib.h> -> include library
 
 - `#define` -> defines a symbolic name or symbolic constant to be a particular string of characters
-    #define name replacement list
+    `#define name replacement list`
 Thereafter, any occurrence of name (not in quotes and not part of another name) will be replaced by the corresponding remplacement text. The replacement text can be any sequence of charactersl it's not limited to numbers.
 
 - a general rule - in any context where it is permissible to use the value of some type, you can use a more complicated expression of that type.

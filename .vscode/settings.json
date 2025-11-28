@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "_printf.h": "c",
+        "cdefs.h": "c"
+    }
+}
