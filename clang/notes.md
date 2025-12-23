@@ -1,3 +1,5 @@
+## Useful tooks
+- ascii - in console write `ascii` and it will print ascii table
 
 ## escape sequences
 - \n - new line
@@ -25,11 +27,18 @@
 - %3.0f - floating point number, at least three characters wide, no decimal points
 - %6.1f - at least 6 characters wide with 1 digit after decimal point
 - %.2f - print as floating point, 2 characters after decimal point
+- %f - is used for float and double
 - %o - octal
 - %x - hexadecimal
 - %c - character
 - %s - character string
--%% - % it self
+- %% - % it self
+- %ld - a long integer
+
+## increment / decrement
+- ++ -> means, increment by 1
+- -- -> means, decrement by 1
+
 
 ## math details
 - integer division truncates (any fractional part is discarded)
@@ -65,6 +74,10 @@ Thereafter, any occurrence of name (not in quotes and not part of another name) 
     3. the increment step (fahr=fahr+20) is executed and the condition re-evaluated.
 The loop terminates if the condition has become false. The body can be a single statement or a group of statements enclosed in braces. The initialization, condition and increment can be any expressions.
 
+- the `for` and `while` statements help ensure that programs do reasonable things with boundary conditions.
+
+- a character (char) within single quotes '\n' or 'c' represents an integer value equal to the numerical value of the character in the machine's character set. This is called a character constant, althought it is just another way to write a small integer. E.g. 'A' is a character constant; in the ASCII character set it's value is 65, the internal representation of the character A. So '\n' stands for the value of the newline character, which is 10 in ASCII.
+
 
 ## text input/output
 - Text input or output, regardless of where it originates ow where it goes to, is dealt with as streams of characters.
@@ -82,3 +95,5 @@ Calls to `putchar` and `printf` may be interleaved; the output will appear in th
 - The problem is distinguishing the end of input from valid data. The solution is that `getchar` returns a distinctive value when there is no more input, a value that cannot be confused with any real character. This value is called `EOF`, for ``end of file``. We must declare `c` to be a type big enough to hold any value that `getchar` returns. We can't use `char` since `c` must be big enought to hold `EOF` in addition to any possible `char` there for best to use is `int` for `c = getchar();`
 
 - `EOF` is an integer defined in `<stdio.h>`, but the specific numeric value doesn't matter as long as it is not the same as any `char` value. By using the symbolic constant, we are assured that nothing in the program depends on the specific numeric value.
+
+- the standard library ensures that an input text stream appears as a sequence of lines, each terminated by a newline
