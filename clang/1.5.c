@@ -9,21 +9,48 @@ int countLines();
 int countBlanks();
 int replaceBlanksToSingleBlank();
 int replaceSpecSymbolsToVisible();
+int wordCounting();
 
 #define BLANKS 32
 #define TABS 9
 #define NEWLINES 10
 #define BLANK_DETECTED 1
+#define IN 1		// inside a word
+#define OUT 0		// outside a word
 
 int main()
 {
-    replaceSpecSymbolsToVisible();
+    wordCounting();
 
     return 0;
 }
 
+/* 1.5.4. count lines, lines and characters in input*/
+int wordCounting(){
+	int c, nw, nc;
+	int state = OUT;
+	int nl = nw = nc = 0;
+
+	while((c = getchar()) != EOF){
+		++nc;
+		if (c == '\n'){
+			++nl;
+		}
+		if (c == ' ' || c == '\n' || c == '\t') {
+			state = OUT;
+		} else if (state == OUT) {
+			state = IN;
+			++nw;
+		}
+	}
+
+	printf("%d %d %d\n", nl, nw, nc);
+
+	return 0;
+}
+
 /* 1.5.3 Line Counting */
-int replaceSpecSymbolsToVisible(){
+int replaceSpecSymbolsToVisible(){ // 1.10 exercise
     int c;
 
     while ((c = getchar()) != EOF) {
@@ -158,7 +185,7 @@ int copyInputToOutput(){
 
 int copyInputToOutput2(){
     int c;
-    
+
     while ((c = getchar()) != EOF) {
         putchar(c);
     }
