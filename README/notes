@@ -1,0 +1,19 @@
+read kernel docs https://docs.kernel.org to undesrand about process of deve-
+lopment and other details about kernel before jumping on it.
+
+maybe reading free ebook about git would also give more knowledge
+and ease of mind regarding kernel dev
+
+# notes from kernel docs
+
+- major release happens every 2-3 months
+- the merge window for new features lasts up to 2 weeks and after x.x.x-rc1
+the time is to stabilize the rc (release candidate)
+- over next 6-10 weeks only fix patches are accepted to the mainline,
+unless some times if it's e.g. driver code that doesn't touch in-tree code
+then it might be accepted like new feature, but very reare it is.
+
+good page to read about kernel news or historical stuf: https://lwn.net
+https://kernelnewbies.org/, https://kernelnewbies.org/KernelProjects
+
+

@@ -3,3 +3,4 @@
 .idea/
 CMakeLists.txt
 *.un*
+.DS_Store
